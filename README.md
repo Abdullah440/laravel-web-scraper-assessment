@@ -7,11 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## : Task 1: Web Scraping Setup
+## Task 1: Web Scraping Setup
 
 Set up a new Laravel project called "WebScraper".
 Create a new route /scrape that triggers a controller method for web scraping
-## : Task 2: Web Scraping and Database Insertion
+## Task 2: Web Scraping and Database Insertion
 
 Write a function in the controller that performs the following:
 - Scrapes the details of the top 10 movies from IMDb's [https://www.imdb.com/chart/top](https://www.imdb.com/chart/top).
@@ -19,10 +19,10 @@ Write a function in the controller that performs the following:
 - Stores the scraped movie details in a MySQL database using Eloquent ORM.
 - Handle any exceptions that might occur during scraping or database insertion.
 
-## : Task 3: Database Validation
+## Task 3: Database Validation
 - Implement validation to ensure that only unique movies are inserted into the database.
 
-## : Task 4: Scheduler and Queue for Scraping
+## Task 4: Scheduler and Queue for Scraping
 
 - Implement a scheduler that runs the scraping task daily at 12:00 PM using Laravel's task
 scheduling.
