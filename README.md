@@ -7,58 +7,42 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## : Task 1: Web Scraping Setup
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Set up a new Laravel project called "WebScraper".
+Create a new route /scrape that triggers a controller method for web scraping
+## : Task 2: Web Scraping and Database Insertion
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Write a function in the controller that performs the following:
+- Scrapes the details of the top 10 movies from IMDb's [https://www.imdb.com/chart/top](https://www.imdb.com/chart/top).
+- Extracts details such as title, year, rating, and URL.
+- Stores the scraped movie details in a MySQL database using Eloquent ORM.
+- Handle any exceptions that might occur during scraping or database insertion.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## : Task 3: Database Validation
+- Implement validation to ensure that only unique movies are inserted into the database.
 
-## Learning Laravel
+## : Task 4: Scheduler and Queue for Scraping
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Implement a scheduler that runs the scraping task daily at 12:00 PM using Laravel's task
+scheduling.
+- Integrate a queue to handle the scraping process asynchronously using Laravel's queue
+system.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Task 5: Route for Viewing Movie List
+- Create a new route /movies that triggers a controller method to retrieve and display the
+list of scraped movies from the database.
 
-## Laravel Sponsors
+## Task 6: Error Handling
+- Enhance your code to gracefully handle connectivity issues while scraping IMDb's
+website.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Task 7: Unit Testing
+- Write unit tests to ensure the correctness of the web scraping and database
+insertion logic.
+- Mock the scraping process to simulate fetching data from IMDb's chart.
+- Ensure proper handling of exceptions and validation.
 
-### Premium Partners
+## Developed By
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-  [Abdullah Bhatti](https://www.linkedin.com/in/abdullahbhatti/).
